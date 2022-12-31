@@ -1,0 +1,75 @@
+* {
+    box-sizing: border-box;
+}
+.carousel .content {
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,0.5);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* card  */
+.card {
+    margin: 30px ;
+    width: 350px;
+    position: relative;
+    height: auto;
+    overflow: hidden;
+    border: 2px solid black;
+}
+.card img  {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.card .card-content::before {
+    height: 97%;
+    width: 97%;
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+    background-color: chartreuse;
+    margin: auto;
+    display: flex;
+    content: "";
+    opacity: 0;
+    transition: all 0.5s;
+}
+.card:hover .card-content::before{
+    opacity: 0.6;
+}
+.card .content {
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    color: white;
+    transform: rotate(90deg);
+    opacity: 0;
+    transition: all 0.5s;
+    
+}
+.card:hover .content {
+    transform: rotate(0deg);
+    opacity: 1;
+}
+
+
+
+
+
+
